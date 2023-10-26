@@ -59,6 +59,17 @@ ul {
 /* ====================PAGE HRADER===================== */
 header {
     background-color: #FFF;
+    border-bottom: 1px solid  #E7E9FC;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+
+
+
+   
+
+
+
 }
 .page-header {
     border-bottom: 1px solid #e7e9fc;
@@ -97,7 +108,12 @@ header {
 .logo-titel-studio {
     color:  #2E2F42;
        }
-
+.header-menu-list {
+    /* display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: o; */
+}
 .up-title {
     color:  #2E2F42;
          font-size: 16px;
@@ -105,7 +121,31 @@ header {
         line-height: 1.5;
         letter-spacing: 0.02em;
         padding: 24px 0;
+      
+        
 }
+.up-title::after {
+    content: '';
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+background: #ffff;
+display: block;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.up-title:hover::after {
+ 
+    content: '';
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+background:  #404BBF;
+display: block;
+transform: translateY(20px);
+
+}
+
 .up-title:hover,
 .up-title:active,
 .up-title:focus  {
@@ -134,6 +174,11 @@ header {
    
     
 }
+.up-title:hover,
+.up-title:active,
+.up-title:focus {
+    color:  #404BBF; 
+}
 .contacts-link:hover,
 .contacts-link:active,
 .contacts-link:focus {
@@ -147,15 +192,18 @@ header {
 
 .main-section {
     background:  #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)),
-     url('../images/img-name.jpg'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+   background-image: linear-gradient(
+     rgba(46, 47, 66, 0.70),    
+     rgba(46, 47, 66, 0.70)), 
+    url('../images/img-name.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   
     padding: 188px 0;
    max-width: 1440px;
    margin: 0 auto  ;
 }
+
 .main-section .container {
     display: flex;
     flex-direction: column;
@@ -213,15 +261,6 @@ padding: 120px 0;
     padding: 0 15px;
     
 }
-.icon-container {
-width: 264px;
-height: 112px;
-border:  1px solid  #8E8F99;
-margin-bottom: 8px;
-}
-.icon {
-    margin: 24px 100px;
-}
 
 .description-title {
     position: absolute;
@@ -250,7 +289,7 @@ margin-bottom: 8px;
      font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 .text-paragraphe {
     color:#434455;
@@ -258,6 +297,20 @@ margin-bottom: 8px;
     letter-spacing: 0.02em;
 }
 
+.icon-container {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+border: 1px solid #8E8F99;
+}
+.description-list-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.icon-section {
+ margin: 24px 100px;
+}
 /*===============================Section 2============================*/
 
 
@@ -287,6 +340,9 @@ padding: 0 15px;
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 
+   0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-list-container {
     padding: 32px 0;
@@ -317,20 +373,14 @@ padding: 0 15px;
     gap: 24px;
 
 }
-.team-menu-icon-link {
+.team-list-icon {
+    background-color: #4D5AE5;
     width: 40px;
     height: 40px;
-    background-color: #4D5AE5;
     border-radius: 50%;
 }
-.team-icon {
+.team-section-icon {
     margin: 12px;
-}
-.team-icon {
-    fill: #F4F4FD;
-}
-.icon {
-  /* fill: #4D5AE5; */
 }
 /*==================================Section 3=============================*/
 
@@ -367,6 +417,13 @@ padding: 0 15px;
 }
 .portfolio-list {
     width: calc((100% - 48px) / 3);
+}
+.portfolio-list:hover {
+    border: 1px solid #F4F4FD;
+
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+ 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+ 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-product-title {
     color:  #2E2F42;
