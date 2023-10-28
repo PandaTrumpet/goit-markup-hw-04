@@ -108,13 +108,10 @@ header {
     margin-top: 0;
     margin-bottom: o; */
     /* overflow: hidden; */
-    position: relative;
+    /* position: relative; */
     overflow: hidden; 
   
 }
-/* .studio {
-    color: #404bbf;
-} */
 
 
 .up-title {
@@ -124,7 +121,7 @@ header {
         line-height: 1.5;
         letter-spacing: 0.02em;
         padding: 24px 0;
-        /* position: relative; */
+        position: relative;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       
            
@@ -132,7 +129,8 @@ header {
 }
 .current {
     color:  #404bbf;
- 
+  
+  
 }
 
 .current::after {
